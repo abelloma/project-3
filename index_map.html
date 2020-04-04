@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>beer, Beer, BEER</title>
+
+      <!-- Leaflet CSS & JS-->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+      integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+      crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+      integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+      crossorigin=""></script>
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Leaflet-Choropleth JavaScript -->
+    <script type="text/javascript" src="choropleth.js"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="d3Style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <!-- <canvas id="canvas-image-blending"></canvas> -->
+  <div class="container">
+    <div class="row"> <!-- header -->
+      <div class="col-md-12 jumbotron text-center"  >
+        <h1>Brewery Information by State</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <a class="btn btn-warning" href="index.html" role="button">Beer</a>
+        <a class="btn btn-danger" href="wine.html" role="button">Wine</a>
+      </div>
+      
+    </div>
+    <div class="row">  <!-- beer-->
+      
+      <div class="col-md-1" >
+        <div class="keg">
+          <span class="handle"></span>
+          <span class="pipe"></span>
+        </div>
+        <div class="glass">
+          <span class="beer"></span>
+        </div>
+      </div>
+      <div class="col-md-11"> <p></p></div>
+    </div>
+  
+    <div class="row">  <!-- charts -->
+      <div class="col-md-9">
+        <!-- <div id="chart"></div> -->
+        <div id="map"></div>
+      </div>
+      <div class="col-md-3">
+        <div class="well">
+          <h5>State:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">State Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+
+      <!-- <div class="col-md-3">
+        <div id="gauge"></div>
+      </div> -->
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div> -->
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="config.js"></script>
+
+  <script src="./static/js/combo.js"></script>
+  <!-- <script src="./static/js/bar.js"></script> -->
+
+
+  <!-- <script src="./static/js/bonus.js"></script> -->
+
+</body>
+
+</html>
